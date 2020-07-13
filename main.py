@@ -5,7 +5,7 @@ import numpy as np
 import tensorflow as tf
 from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_splitunds
 from loss import spread_loss, cross_entropy, margin_loss
 from network import baseline_model_kimcnn, baseline_model_cnn, capsule_model_A, capsule_model_B
 from sklearn.utils import shuffle
@@ -79,6 +79,11 @@ def load_data(dataset):
             del(test_label[i])
     
     train, dev, train_label, dev_label = train_test_split(train, train_label, test_size=0.1, random_state=0)
+    print("\n\nTrain: ", train.shape)
+    print("Dev: ", dev.shape)
+    print("train_label: ", train_label.shape)
+    print("dev_label", dev_label.shape)
+
     return train, train_label, test, test_label, dev, dev_label, w2v
 
 class BatchGenerator(object):
