@@ -5,7 +5,7 @@ import numpy as np
 import tensorflow as tf
 from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import accuracy_score
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from loss import spread_loss, cross_entropy, margin_loss
 from network import baseline_model_kimcnn, baseline_model_cnn, capsule_model_A, capsule_model_B
 from sklearn.utils import shuffle
