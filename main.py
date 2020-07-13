@@ -79,10 +79,10 @@ def load_data(dataset):
             del(test_label[i])
     
     train, dev, train_label, dev_label = train_test_split(train, train_label, test_size=0.1, random_state=0)
-    print("\n\nTrain: ", train.shape)
-    print("Dev: ", dev.shape)
-    print("train_label: ", train_label.shape)
-    print("dev_label", dev_label.shape)
+    print("\n\nTrain: ", np.array(train).shape)
+    print("Dev: ",  np.array(dev).shape)
+    print("train_label: ", np.array(train_label).shape)
+    print("dev_label",  np.array(dev_label).shape)
 
     return train, train_label, test, test_label, dev, dev_label, w2v
 
